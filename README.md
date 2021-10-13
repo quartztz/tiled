@@ -1,5 +1,7 @@
 # tiled - a way to emulate the "Tile" wallpaper option on Windows, but in Linux
 
+## The project
+
 ### About the project
 
 I recently made the switch from a Windows 10 machine to a Chromebook running Linux through crostini. I'm enjoying the new interface, and I've found a way to do (almost) everything I used to be able to do on my previous laptop. 
@@ -26,7 +28,7 @@ and navigate to the "example" folder to retreive your new image.
 
 To use your own images, the syntax is very similar: simply point to your original image's path, and add an optional output directory. You'll get a tiled wallpaper of the original image of size 1920x1080, "stretched.jpg". You can change this size by editing the END_WIDTH and END_HEIGHT variables in "image_stitcher.py": as of now, this somewhat hacky solution is the only way to change it, but I might explore other ways in the future, as I get more comfortable with this kind of project. 
 
-# TODOs
+## TODOs
 
 I guess there's a couple of ways I could improve this: 
 
