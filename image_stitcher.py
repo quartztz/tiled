@@ -1,6 +1,7 @@
 from PIL import Image
 import math
 import sys
+import os
 
 class Extender: 
     
@@ -44,12 +45,18 @@ class Extender:
         result = result.crop((0, 0, self.END_WIDTH, self.END_HEIGHT))
 
         return result
+      
+    def createDefaultPath(self, name): 
+        ret = os.path.join(os.getcwd(), name.split('/')[-1].split('.')[0])
+        return ret
 
     def main(self, inFile, outputPath): 
         
         inputFile = inFile
         output_path = outputPath
-        print(inputFile)
+        if not os.path.exists(output_path): 
+            os.makedirs(output_path)
+        # print(inputFile)
         final = self.extendImage(inputFile, output_path)
         final.save(f"{outputPath}/stretched.jpg")
 
@@ -60,11 +67,11 @@ name = sys.argv[1]
 try:
     outputPath = sys.argv[2]
 except: 
-    outputPath = "."
-    print("No output path defined, using default ./{image name}")
+    outputPath = extender.createDefaultPath(name)
+    print(f"No output path defined, creating directory with image file name {outputPath}")
 
-print(name)
+# print(name)
 
-print(outputPath)
+# print(outputPath)
 
 extender.main(name, outputPath)
