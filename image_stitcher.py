@@ -3,6 +3,9 @@ import math
 import sys
 import os
 
+# CODE BY quartztz :: hosted @ github.com/quartztz/tiled
+# © 13/10/2021
+
 class Extender: 
     
     def __init__(self): 

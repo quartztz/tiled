@@ -32,8 +32,8 @@ I guess there's a couple of ways I could improve this:
 
 - [ ]  better interface: probably not a GUI but at least something less clunky
 - [ ]  more functionality, more easily accessible:
-    - [ ]  allow the user to specify much more easily path to file and output directory;
-		- [ ]  allow the user to pick their own final size from the command line itself;
+	- [ ]  allow the user to specify much more easily path to file and output directory;
+	- [ ]  allow the user to pick their own final size from the command line itself;
 - [ ]  tell me if there's more you would like to see! open an issue and let me know :)
 
 # Libraries used
