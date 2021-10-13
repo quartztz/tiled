@@ -2,6 +2,9 @@ from PIL import Image
 import math
 import sys
 
+# CODE BY quartztz :: hosted @ github.com/quartztz/tiled
+# © 13/10/2021
+
 class Extender: 
     
     def __init__(self): 
