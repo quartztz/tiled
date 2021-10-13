@@ -38,6 +38,6 @@ I guess there's a couple of ways I could improve this:
 	- [ ]  allow the user to pick their own final size from the command line itself;
 - [ ]  tell me if there's more you would like to see! open an issue and let me know :)
 
-# Libraries used
+## Libraries used
 
 This program uses the Python Image Library to help with image manipulation. It quite literally wouldn't have been possible to do this without it, I think. Or rather, it would've been a lot more tedious: I guess I *could* have done it, but there's a high change I just would've quit halfway through. So big thanks to them.
