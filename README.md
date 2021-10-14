@@ -18,8 +18,8 @@ I might add some more functionality if I ever feel the need to, but for now it's
 
 To test it out, you can use the included "example" folder: it includes a sample image coming from my copy of the 10PRINT script from old Commodore 64 computers, which lends itself pretty well to this kind of wallpaper. Simply run: 
 
-```bash
-python3 image_stitcher.py ./example/example.png ./example/
+```
+python3 tiled.py ./example/example.png ./example/
 ```
 
 and navigate to the "example" folder to retreive your new image.
