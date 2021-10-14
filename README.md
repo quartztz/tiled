@@ -19,7 +19,7 @@ I might add some more functionality if I ever feel the need to, but for now it's
 To test it out, you can use the included "example" folder: it includes a sample image coming from my copy of the 10PRINT script from old Commodore 64 computers, which lends itself pretty well to this kind of wallpaper. Simply run: 
 
 ```
-python3 tiled.py ./example/example.png ./example/
+python3 tiled.py example/example.png ./example/
 ```
 
 and navigate to the "example" folder to retreive your new image.
@@ -27,6 +27,13 @@ and navigate to the "example" folder to retreive your new image.
 #### Make your own
 
 To use your own images, the syntax is very similar: simply point to your original image's path, and add an optional output directory. You'll get a tiled wallpaper of the original image of size 1920x1080, "stretched.jpg". You can change this size by editing the END_WIDTH and END_HEIGHT variables in "image_stitcher.py": as of now, this somewhat hacky solution is the only way to change it, but I might explore other ways in the future, as I get more comfortable with this kind of project. 
+
+The command uses the format: 
+```
+python3 tiled.py path/to/input/file optional/output/path
+```
+
+if you want to, you can add this script to your PATH and make it an executable, to simplify the command a little. I'm not sure how worth it it is, but you do you.
 
 ## TODOs
 
