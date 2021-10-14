@@ -33,7 +33,7 @@ The command uses the format:
 python3 tiled.py path/to/input/file optional/output/path
 ```
 
-if you want to, you can add this script to your PATH and make it an executable, to simplify the command a little. I'm not sure how worth it it is, but you do you.
+If you want to, you can add this script to your PATH and make it an executable, to simplify the command a little. I'm not sure how worth it it is, but you do you.
 
 ## TODOs
 
