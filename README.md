@@ -16,17 +16,23 @@ I might add some more functionality if I ever feel the need to, but for now it's
 
 #### Try it out
 
-To test it out, you can use the included "example" folder: it includes a sample image coming from my copy of the 10PRINT script from old Commodore 64 computers, which lends itself pretty well to this kind of wallpaper. Simply run: 
+To test it out, you can use the included ```example``` folder: it includes a sample image coming from my copy of the ```10PRINT``` script from old Commodore 64 computers, which lends itself pretty well to this kind of wallpaper. Simply run: 
 
 ```
 python3 tiled.py example/example.png ./example/
 ```
 
-and navigate to the "example" folder to retreive your new image.
+and navigate to the ```example``` folder to retreive your new image.
 
 #### Make your own
 
-To use your own images, the syntax is very similar: simply point to your original image's path, and add an optional output directory. You'll get a tiled wallpaper of the original image of size 1920x1080, "stretched.jpg". You can change this size by editing the END_WIDTH and END_HEIGHT variables in "image_stitcher.py": as of now, this somewhat hacky solution is the only way to change it, but I might explore other ways in the future, as I get more comfortable with this kind of project. 
+To use your own images, the syntax is very similar: simply point to your original image's path, and add an optional output directory. You'll get a tiled wallpaper of the original image of size 1920x1080, ```stretched.jpg```. You can change this size by editing the END_WIDTH and END_HEIGHT variables in ```image_stitcher.py```: as of now, this somewhat hacky solution is the only way to change it, but I might explore other ways in the future, as I get more comfortable with this kind of project. 
+
+The first time it's called without an explicit output path, the program creates a folder in the user's home directory, called ```wallpapers```. In that folder, every time the program is called with a file with a new name, a folder is created with the name of the file that generated it, containing the output file (default ```stretched.jpg```). 
+
+> BE CAREFUL! This means that two file with the same name **will** (for the time being, at least), generate a file with the same output name, in the same folder. The earlier one **will** be overwritten. Please take countermeasures to avoid data loss (Rename input file, for now. I might add a way to change name as an option, but I still have to understand exactly the best way to do so). 
+
+
 
 The command uses the format: 
 ```

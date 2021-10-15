@@ -50,7 +50,12 @@ class Extender:
         return result
       
     def createDefaultPath(self, name): 
-        ret = os.path.join(os.getcwd(), name.split('/')[-1].split('.')[0])
+        # ret = os.path.join(os.getcwd(), name.split('/')[-1].split('.')[0])
+        
+        # creates as default path a folder inside of a "wallpapers" folder 
+        # whose name is the name of the input file without the extension.
+
+        ret = os.path.join(os.path.expanduser('~'), "wallpapers", name.split('/')[-1].split('.')[0])
         return ret
 
     def main(self, inFile, outputPath): 
@@ -59,7 +64,6 @@ class Extender:
         output_path = outputPath
         if not os.path.exists(output_path): 
             os.makedirs(output_path)
-        # print(inputFile)
         final = self.extendImage(inputFile, output_path)
         final.save(f"{outputPath}/stretched.jpg")
 
