@@ -71,6 +71,8 @@ extender = Extender()
 
 name = sys.argv[1]
 
+# usage is defined as "python3 tiled.py input_file_path optional_output_file_path"
+
 try:
     outputPath = sys.argv[2]
 except: 
