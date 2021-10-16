@@ -1,17 +1,17 @@
 from PIL import Image
 import math
-import sys
 import os
+import argparse
 
 # CODE BY quartztz :: hosted @ github.com/quartztz/tiled
 # © 13/10/2021
 
 class Extender: 
     
-    def __init__(self): 
+    def __init__(self, size=(1920, 1080)): 
     
-        self.END_WIDTH = 1920
-        self.END_HEIGHT = 1080
+        self.END_WIDTH = size[0]
+        self.END_HEIGHT = size[1]
 
     def extendImage(self, input_file, output_path): 
         
@@ -67,20 +67,34 @@ class Extender:
         final = self.extendImage(inputFile, output_path)
         final.save(f"{outputPath}/stretched.jpg")
 
-extender = Extender()
+parser = argparse.ArgumentParser(description="Extend small image file to larger size by repeating it multiple times.")
 
-name = sys.argv[1]
+parser.add_argument('input_file', type=str)
+parser.add_argument('--output_path', type=str, required=False)
+parser.add_argument('--size', type=str, required=False, help="output size, formatted as (1920x1080)")
 
-# usage is defined as "python3 tiled.py input_file_path optional_output_file_path"
+args = parser.parse_args()
 
-try:
-    outputPath = sys.argv[2]
-except: 
+name = args.input_file
+
+# usage is defined as "python3 tiled.py input_file_path [--output_path output_path] [--size (1080x1920)]"
+
+if args.size: 
+    size = tuple([ int(x) for x in args.size.split("x") ])
+    extender = Extender(size)
+else: 
+    extender = Extender()
+
+if not args.output_path: 
     outputPath = extender.createDefaultPath(name)
     print(f"No output path defined, creating directory with image file name {outputPath}")
+else: 
+    outputPath = args.output_path
 
 # print(name)
 
 # print(outputPath)
+
+# print(size)
 
 extender.main(name, outputPath)
