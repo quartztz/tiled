@@ -41,6 +41,32 @@ python3 tiled.py path/to/input/file optional/output/path
 
 If you want to, you can add this script to your PATH and make it an executable, to simplify the command a little. I'm not sure how worth it it is, but you do you.
 
+#### Examples
+
+**10PRINT** (default example)
+
+<img src="https://i.imgur.com/ckk3kgk.png">
+
+becomes
+
+<img src="https://i.imgur.com/NyOOTlJ.jpeg" width=75%>
+
+**Spike Spiegel**
+
+<img src="https://i.imgur.com/TcDmuYP.jpeg">
+
+becomes
+
+<img src="https://i.imgur.com/BvShbM0.jpeg" width=75%>
+
+**JFK pride flag**
+
+<img src="https://i.imgur.com/07YMfzW.png">
+
+becomes
+
+<img src="https://i.imgur.com/Pb1fsaC.jpeg" width=75%>
+
 ## TODOs
 
 I guess there's a couple of ways I could improve this: 
